@@ -1,3 +1,46 @@
 body {
     background-image: url("backgroundimg1.jpg");
 }
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    list-style-position: inside;
+}
+
+ul {
+    list-style: none;
+}
+
+.active {
+    background-color: red;
+    font-size: 150%;
+}
+
+.fejlec {
+    max-width: 99%;
+    min-width: 99%;
+    float: left;
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
+    font-size: 110%;
+}
+
+.main {
+    max-width: 90%;
+    float: left;
+    margin: 7px;
+    background-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 1000px) {
+    img {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+
+    div {
+        max-width: 100%;
+    }
+  }
