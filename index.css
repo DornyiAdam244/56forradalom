@@ -2,16 +2,53 @@ body {
     background-image: url("backgroundimg1.jpg");
 }
 
+h1, h2, p, a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p, h2 {
+    opacity: 0;
+    
+    animation-name: textAnimacio;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+h1 {
+    opacity: 0;
+
+    animation-name: titleAnimacio;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+h2 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+}
+
 li a {
     display: block;
     color: black;
     text-align: center;
     text-decoration: none;
-    list-style-position: inside;
 }
 
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+li:not(.active) {
+    background-color: rgba(255,255,255,.5);
+    opacity: .9
 }
 
 .active {
@@ -23,16 +60,44 @@ ul {
     max-width: 99%;
     min-width: 99%;
     float: left;
-    margin: 5px;
-    background-color: rgb(255, 255, 255);
     font-size: 110%;
+    margin: 7px;
 }
 
 .main {
-    max-width: 90%;
+    max-width: 99%;
     float: left;
-    margin: 7px;
-    background-color: rgb(255, 255, 255);
+    margin: 5px;
+
+}
+
+.gallery img {
+    max-width: auto;
+    height: 230px;
+    float: left;
+    margin: .5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0;
+
+    animation-name: pictureAnimacio;
+    animation-delay: .5s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes textAnimacio {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes pictureAnimacio {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes titleAnimacio {
+    from {font-size: 100%; opacity: 0}
+    to {font-size: 250%; opacity: 1}
 }
 
 @media screen and (max-width: 1000px) {
