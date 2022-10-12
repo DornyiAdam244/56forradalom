@@ -70,6 +70,26 @@ li:not(.active) {
     margin: 5px;
 }
 
+.forrasok {
+    max-width: 99%;
+    float: left;
+    margin: 5px;  
+}
+
+img {
+    max-width: auto;
+    height: 380px;
+    float: left;
+    margin: .5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0;
+
+    animation-name: pictureAnimacio;
+    animation-delay: .5s;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
 .gallery img {
     max-width: auto;
     height: 230px;
